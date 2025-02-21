@@ -37,10 +37,12 @@ class MeraList:
             # print(self.A[self.n-1],"is removed from list.")
             self.n = self.n - 1;
     def clear(self):
-        while self.n != 0:
-            self.pop()
-        print("list is empty now, []")
-            
+        # while self.n != 0:
+        #     self.pop()
+        # print("list is empty now, []")
+        self.size = 1
+        self.n = 0
+        print("Done ")
     def count(self,item):
         count = 0
         for i in range(self.n):
@@ -52,6 +54,7 @@ class MeraList:
             if self.A[i] == item:
                 return i
                 break;
+        return "valueError: item not found"
     def insert(self,index,item):
         B = self.__createArray(self.n+8)
         for i in range(self.n):
@@ -70,11 +73,6 @@ class MeraList:
     def reverse(self):
         ...
             
-L = [3,2,5,4]
-print(L)
-L.insert(1,5)
-print(L)
-l = MeraList()
 # l.append(65)
 # l.append(20)
 # l.append(53)
@@ -92,6 +90,7 @@ l = MeraList()
 # print(l)
 
 # l.pop()
+l = MeraList()
 l.append(3)
 l.append(5)
 l.append(3)
@@ -107,6 +106,10 @@ l.append(6)
 print(l)
 # print(l.count(3))
 # print(l.index(33))
-l.insert(1,2)
-print(l)
+print(len(l))
+# print(l.find(1))
+print(l.index(10))
+# l.insert(1,2)
+# print(l)
+# l.clear()
 # l.clear()
